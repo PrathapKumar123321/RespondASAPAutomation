@@ -5,12 +5,18 @@ public class RespondASAPMain {
         respondASAP.homePage();
         respondASAP.propertiesFile();
         respondASAP.loginAdministrtor();
-        //respondASAP.createAdmin();
-        //respondASAP.viewAdmin();
-        //respondASAP.createUser();
-        //respondASAP.viewUser();
+        /*Thread.sleep(5000);
+        respondASAP.createAdmin();
         Thread.sleep(5000);
-        respondASAP.viewNotifications();
+        respondASAP.viewAdmin();
+        Thread.sleep(5000);
+        respondASAP.createUser();
+        Thread.sleep(5000);
+        respondASAP.viewUser();
+        Thread.sleep(5000);
+        respondASAP.sendNotification();
+        Thread.sleep(5000);
+        respondASAP.viewNotifications();*/
 
     }
 }

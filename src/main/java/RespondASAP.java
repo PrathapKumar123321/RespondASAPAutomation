@@ -46,64 +46,73 @@ public class RespondASAP {
     }
 
     public void loginAdministrtor() throws InterruptedException {
-
             //properties.load(RespondAutomation.class.getClassLoader().getResourceAsStream("Resources.properties"));
             webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-pre-login/app-login/div/div/form/div[2]/input[1]")).sendKeys(properties.getProperty("user_name"));
             Thread.sleep(2000);
             webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-pre-login/app-login/div/div/form/div[2]/input[2]")).sendKeys(properties.getProperty("password"));
             Thread.sleep(2000);
             webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-pre-login/app-login/div/div/form/div[2]/button")).click();
-
     }
     public void createAdmin() throws InterruptedException {
-        webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[3]")).click();
-        Thread.sleep(2000);
-        webDriver.findElement(By.xpath("//*[@id=\"first_name\"]")).sendKeys(properties.getProperty("a_first_name"));
-        Thread.sleep(2000);
-        webDriver.findElement(By.xpath("//*[@id=\"last_name\"]")).sendKeys(properties.getProperty("a_surname"));
-        Thread.sleep(2000);
-        webDriver.findElement(By.xpath("//*[@id=\"email_address\"]")).sendKeys(properties.getProperty("a_email-id"));
-        Thread.sleep(10000);
-        /*webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-create-admin/form/div[5]/select")).click();
-        Thread.sleep(2000);
-        WebElement mySelectElement = webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-create-admin/form/div[5]/select"));*/
-        Select dropDown = new Select(webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-create-admin/form/div[4]/select")));
-        dropDown.selectByVisibleText("India");
-        Thread.sleep(2000);
-        webDriver.findElement(By.xpath("//*[@id=\"mobile_number\"]")).sendKeys(properties.getProperty("a_mobile_number"));
-        Thread.sleep(2000);
-        webDriver.findElement(By.xpath("//*[@id=\"password_text\"]")).sendKeys(properties.getProperty("a_password"));
-        Thread.sleep(2000);
-        webDriver.findElement(By.xpath("//*[@id=\"password_text2\"]")).sendKeys(properties.getProperty("a_confirm_password"));
-        Thread.sleep(5000);
-        webDriver.findElement(By.className("button")).click();
-        Thread.sleep(5000);
-        webDriver.findElement(By.xpath("/html/body/div/div/div[3]/button[1]")).click();
+            webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[3]")).click();
+            Thread.sleep(2000);
+            webDriver.findElement(By.xpath("//*[@id=\"first_name\"]")).sendKeys(properties.getProperty("a_first_name"));
+            Thread.sleep(2000);
+            webDriver.findElement(By.xpath("//*[@id=\"last_name\"]")).sendKeys(properties.getProperty("a_surname"));
+            Thread.sleep(2000);
+            webDriver.findElement(By.xpath("//*[@id=\"email_address\"]")).sendKeys(properties.getProperty("a_email-id"));
+            Thread.sleep(10000);
+            /*webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-create-admin/form/div[5]/select")).click();
+            Thread.sleep(2000);
+            WebElement mySelectElement = webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-create-admin/form/div[5]/select"));*/
+            Select dropDown = new Select(webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-create-admin/form/div[4]/select")));
+            dropDown.selectByVisibleText("India");
+            Thread.sleep(2000);
+            webDriver.findElement(By.xpath("//*[@id=\"mobile_number\"]")).sendKeys(properties.getProperty("a_mobile_number"));
+            Thread.sleep(2000);
+            webDriver.findElement(By.xpath("//*[@id=\"password_text\"]")).sendKeys(properties.getProperty("a_password"));
+            Thread.sleep(2000);
+            webDriver.findElement(By.xpath("//*[@id=\"password_text2\"]")).sendKeys(properties.getProperty("a_confirm_password"));
+            Thread.sleep(5000);
+            webDriver.findElement(By.className("button")).click();
+            Thread.sleep(5000);
+            webDriver.findElement(By.xpath("/html/body/div/div/div[3]/button[1]")).click();
     }
     public void viewAdmin(){
-        webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[5]")).click();
-        //System.out.println(properties.getProperty("name"));
+            webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[5]")).click();
+            //System.out.println(properties.getProperty("name"));
     }
     public void createUser() throws InterruptedException {
-        webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[4]")).click();
-        Thread.sleep(5000);
-        webDriver.findElement(By.xpath("//*[@id=\"first_name\"]")).sendKeys(properties.getProperty("u_first_name"));
-        Thread.sleep(2000);
-        webDriver.findElement(By.xpath("//*[@id=\"last_name\"]")).sendKeys(properties.getProperty("u_surname"));
-        Thread.sleep(5000);
-        Select dropDown = new Select(webDriver.findElement(By.xpath("//*[@id=\"country\"]")));
-        dropDown.selectByVisibleText(" India ");
-        Thread.sleep(3000);
-        webDriver.findElement(By.xpath("//*[@id=\"mobile_number\"]")).sendKeys(properties.getProperty("u_mobile_number"));
-        Thread.sleep(5000);
-        webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-create-user/form/div[6]/button")).click();
-        Thread.sleep(5000);
-        webDriver.findElement(By.xpath("/html/body/div/div/div[3]/button[1]")).click();
+            webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[4]")).click();
+            Thread.sleep(5000);
+            webDriver.findElement(By.xpath("//*[@id=\"first_name\"]")).sendKeys(properties.getProperty("u_first_name"));
+            Thread.sleep(2000);
+            webDriver.findElement(By.xpath("//*[@id=\"last_name\"]")).sendKeys(properties.getProperty("u_surname"));
+            Thread.sleep(5000);
+            Select dropDown = new Select(webDriver.findElement(By.xpath("//*[@id=\"country\"]")));
+            dropDown.selectByVisibleText(" India ");
+            Thread.sleep(3000);
+            webDriver.findElement(By.xpath("//*[@id=\"mobile_number\"]")).sendKeys(properties.getProperty("u_mobile_number"));
+            Thread.sleep(5000);
+            webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-create-user/form/div[6]/button")).click();
+            Thread.sleep(5000);
+            webDriver.findElement(By.xpath("/html/body/div/div/div[3]/button[1]")).click();
     }
     public void viewUser(){
-        webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[6]")).click();
+            webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[6]")).click();
     }
     public void viewNotifications(){
             webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[2]")).click();
+    }
+    public void sendNotification() throws InterruptedException {
+            webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[1]")).click();
+            Thread.sleep(5000);
+            webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[2]/app-send-notification/div/ng-multiselect-dropdown/div/div[1]/span")).click();
+            Thread.sleep(10000);
+            webDriver.findElement(By.xpath("//*[@id=\"message_text\"]")).sendKeys(properties.getProperty("send_notification_data"));
+            Thread.sleep(10000);
+            webDriver.findElement(By.className("button")).click();
+            Thread.sleep(5000);
+            webDriver.findElement(By.xpath("/html/body/div/div/div[3]/button[1]")).click();
     }
 }
