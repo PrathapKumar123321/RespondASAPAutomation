@@ -81,8 +81,8 @@ public class RespondASAP {
         webDriver.findElement(By.xpath("/html/body/div/div/div[3]/button[1]")).click();
     }
     public void viewAdmin(){
-        //webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[5]")).click();
-        System.out.println(properties.getProperty("name"));
+        webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[5]")).click();
+        //System.out.println(properties.getProperty("name"));
     }
     public void createUser() throws InterruptedException {
         webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[4]")).click();
@@ -102,5 +102,8 @@ public class RespondASAP {
     }
     public void viewUser(){
         webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[6]")).click();
+    }
+    public void viewNotifications(){
+            webDriver.findElement(By.xpath("/html/body/app-root/div/app-home/app-post-login/div/div[1]/a[2]")).click();
     }
 }
